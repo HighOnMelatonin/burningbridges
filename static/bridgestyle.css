@@ -1,0 +1,30 @@
+
+@font-face {
+    font-family: IniyaDisplay;
+    src: url(IniyaDisplay.otf);
+}
+
+body{
+    font-size: 30px;
+}
+
+
+/*Header*/
+div.header{
+    font-family: IniyaDisplay;
+    font-size: 50px;
+    text-align: center;
+}
+
+h1.header{
+    font-weight: 900;
+}
+
+
+
+/*Content on the right of the main body*/
+div.rightcontent{
+    text-align: center;
+    margin-left: 50%;
+}
+
