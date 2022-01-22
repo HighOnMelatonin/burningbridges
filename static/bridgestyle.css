@@ -19,22 +19,27 @@ body{
 /*Header*/
 div.header{
     font-family: IniyaDisplay;
-    font-size: 50px;
     text-align: center;
 }
 
 h1.header{
     font-weight: 900;
+    font-size: 90px;
+}
+
+h2.header{
+    font-weight: 900;
+    font-size: 70px;
 }
 
 
 /*Content on the right of the main body*/
 div.rightcontent{
-    float: right;
     text-align: center;
     margin-left: 60%;
     border: 2px solid #303030;
     border-radius: 20px;
+    margin-top: -634px;
     margin-right: 6%;
     height: 630px;
     overflow: hidden;
@@ -43,7 +48,7 @@ div.rightcontent{
 
 /*The how to portion on the right side*/
 div.howTo{
-    width: 300%;
+    width: 500%;
     animation: slide 15s ease infinite;
 }
 
@@ -54,9 +59,9 @@ h3.howTo{
 div.steps{
     float: left;
     text-align: center;
-    width: 33%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    width: 20%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     font-size: 28px;
     font-weight: 100;
 }
@@ -67,9 +72,11 @@ p.steps{
 }
 
 @keyframes slide {
-    20% {margin-left: 0px;}
-    40% {margin-left: -100%;}
-    60% {margin-left: -200%;}
+    8% {margin-left: 0px;}
+    30% {margin-left: -100%;}
+    50% {margin-left: -200%;}
+    75% {margin-left: -300%;}
+    95% {margin-left: -400%;}
 }
 
 
@@ -81,8 +88,129 @@ div.leftcontent{
     border-radius: 20px;
     margin-right: 44%;
     height: 630px;
+    text-align: center;
 }
 
 h3.createGame{
     font-weight: 100;
+}
+
+/*Get username*/
+div.description{
+    margin-left: 45%;
+    margin-top: -30%;
+    text-align: left;
+    height: 30%
+}
+
+p.description{
+    font-size: 28px;
+}
+
+input.textinput{
+    height: 35px;
+    width: 240px;
+    padding-left: 5px;
+    padding-right: 12px;
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: PartyConfetti;
+    font-weight: 100;
+}
+
+/*user pic*/
+div.usericon{
+    height: 156.3px;
+    width: 156.3px;
+    text-align: left;
+    margin-left: 10%;
+    margin-top: 20%
+}
+
+img.usericon{
+    scale: 30%;
+    margin-left: -114%;
+    margin-top: -114%;
+}
+
+
+/*Player list*/
+div.playerlist{
+    height: 70%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+h2.subhead{
+    font-weight: 200;
+}
+
+
+/*Setup*/
+div.settings{
+    margin-top: -150px;
+}
+
+p.formcontext{
+    height: 50px;
+    font-weight: 100;
+    margin-top: 100px;
+    text-align: left;
+    margin-left: 70px;
+    margin-right: 150px;
+}
+
+div.form{
+    position: relative;
+    left: 200px;
+    top: -85px;
+}
+
+input.submitbutton{
+    width: 100px;
+    font-size: 30px;
+    font-family: PartyConfetti;
+    height: 45px;
+    background-color: #AACEF0;
+    border-radius: 8px;
+    border: 3px solid #000000;
+}
+
+input.submitbutton:hover{
+    background-color: #99A0FF;
+}
+
+input.numinput{
+    height: 45px;
+    width: 200px;
+    border-radius: 8px;
+    border: 2px solid #606060;
+    font-size: 30px;
+    font-family: PartyConfetti;
+}
+
+/*Joining a room*/
+div.room{
+    margin-top: -85px;
+}
+
+
+
+/*Main body*/
+div.mainbody{
+    margin-left: 60px;
+    margin-right: 60px;
+    border: 3px solid #303030;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+/*Getting the questions*/
+input.qninput{
+    width: 500px;
+    height: 35px;
+    font-size: 30px;
+    font-family: PartyConfetti;
 }
