@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Burning Bridges</title>
+        <link rel = "stylesheet" href = "../static/bridgestyle.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h2 class = "header">Burning Bridges</h1>
+        </div>
+
+        <div class="mainbody">
+            <div class="selection">
+                {% for player in players %}
+                    <button class = "playerbutton" value = "{{ player }}"" name = "selected">{{ player }}</button> 
+                {% endfor %}
+            </div>
+
+            <div class="question">
+                <h3 class = "subheader">Question</h3>
+                <p>{{ question }}</p>
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
