@@ -95,6 +95,8 @@ h3.createGame{
     font-weight: 100;
 }
 
+
+
 /*Get username*/
 div.description{
     margin-left: 45%;
@@ -119,6 +121,7 @@ input.textinput{
     font-family: PartyConfetti;
     font-weight: 100;
 }
+
 
 /*user pic*/
 div.usericon{
@@ -145,6 +148,35 @@ div.playerlist{
 
 h2.subhead{
     font-weight: 200;
+}
+
+table.playerlist{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+    border-collapse: separate;
+    border: 0px transparent;
+}
+
+tr.playerlist{
+    text-align: center;
+    margin-top: 2px;
+}
+
+th.tableheader{
+    border-radius: 10px;
+    border: 0px transparent;
+    text-align: center;
+    font-size: 40px;
+}
+
+td.playername{
+    padding: 2%;
+    text-align: center;
+    border-collapse: separate;
+    border: 5px solid #505050;
+    border-radius: 10px;
 }
 
 
@@ -191,6 +223,7 @@ input.numinput{
     font-family: PartyConfetti;
 }
 
+
 /*Joining a room*/
 div.room{
     margin-top: -85px;
@@ -205,7 +238,9 @@ div.mainbody{
     border: 3px solid #303030;
     border-radius: 10px;
     padding: 2%;
+    height: 600px;
 }
+
 
 /*Getting the questions*/
 input.qninput{
@@ -214,3 +249,42 @@ input.qninput{
     font-size: 30px;
     font-family: PartyConfetti;
 }
+
+
+/*Selecting player*/
+button.playerbutton{
+    width: 30%;
+    height: 100px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #AACEF0;
+    border: 5px solid #000000;
+    border-radius: 10px;
+    font-size: 40px;
+    font-family: IniyaDisplay;
+    font-weight: 900;
+
+}
+
+button.playerbutton:hover{
+    background-color: #99A0FF;
+}
+
+div.selection{
+    width: 70%;
+}
+
+
+
+/*Question*/
+div.question{
+    width: 30%;
+    margin-left: 70%;
+    margin-bottom: 400px;
+    text-align: center;
+}
+
+h3.subheader{
+    font-size: 70px;
+}
+
