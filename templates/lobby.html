@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Burning Bridges</title>
+        <link rel = "stylesheet" href = "../static/bridgestyle.css">
+    </head>
+
+    <body>
+
+        <div class="header">
+            <h1 class = "header">Burning Bridges</h1>
+        </div>
+
+
+        <div class="leftcontent">
+
+            <h2 class = "subhead">Setup</h2>
+            <p class = "formcontext">Number of questions per player:</p>
+            <p class = "formcontext">Invite code: {{ code }}</p>
+
+            <div class="settings">
+                
+                <form method = "POST" action = "{{ url_for('') }}">
+                    <div class="form">
+                        <input class = "numinput" type = "number" name = "number">
+
+                        <br><br>
+
+                        <input class = "submitbutton" type = "submit" value = "Start">
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+
+        
+        <div class="rightcontent">
+            <h2 class = "subhead">Players</h2>
+
+            <div class="playerlist">
+                <ul>
+                    {% for player in players %}
+                        <li class = "playername">{{ player }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+
+    </body>
+</html>
