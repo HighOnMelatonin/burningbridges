@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Burning Bridges</title>
+        <link rel = "stylesheet" href = "../static/bridgestyle.css">
+    </head>
+
+    <body>
+        <div class="header">
+            <h2 class = "header">Burning Bridges</h2>
+        </div>
+
+
+        <div class="mainbody">
+            <div class="getqns">
+                {% for i in range({{ number }}) %}
+                <form method = "post" action = "{{ url_for('') }}">
+                    <input class = "qninput" type = "text" placeholder = "Who's most likely to die a virgin?" name = "question">
+                    <input type = "submit" class = "submitbutton" value = "submit">
+                </form>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </body>
+</html>
