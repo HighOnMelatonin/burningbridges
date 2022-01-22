@@ -4,8 +4,15 @@
     src: url(IniyaDisplay.otf);
 }
 
+@font-face {
+    font-family: PartyConfetti;
+    src: url(PartyConfettiRegular.ttf);
+}
+
+
 body{
     font-size: 30px;
+    font-family: PartyConfetti;
 }
 
 
@@ -21,10 +28,61 @@ h1.header{
 }
 
 
-
 /*Content on the right of the main body*/
 div.rightcontent{
+    float: right;
     text-align: center;
-    margin-left: 50%;
+    margin-left: 60%;
+    border: 2px solid #303030;
+    border-radius: 20px;
+    margin-right: 6%;
+    height: 630px;
+    overflow: hidden;
 }
 
+
+/*The how to portion on the right side*/
+div.howTo{
+    width: 300%;
+    animation: slide 15s ease infinite;
+}
+
+h3.howTo{
+    font-weight: 100;
+}
+
+div.steps{
+    float: left;
+    text-align: center;
+    width: 33%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 28px;
+    font-weight: 100;
+}
+
+p.steps{
+    margin-left: 75px;
+    margin-right: 75px;
+}
+
+@keyframes slide {
+    20% {margin-left: 0px;}
+    40% {margin-left: -100%;}
+    60% {margin-left: -200%;}
+}
+
+
+
+/*Content on the left of the main body*/
+div.leftcontent{
+    margin-left: 6%;
+    border: 2px solid #303030;
+    border-radius: 20px;
+    margin-right: 44%;
+    height: 630px;
+}
+
+h3.createGame{
+    font-weight: 100;
+}
