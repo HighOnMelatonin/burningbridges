@@ -21,8 +21,9 @@ This is a web-based game, it is not online at the moment, this repository only c
 The game continues until the game master decides to stop or the question pool is exhausted
 
 ## DISCLAIMER ##
-! Code is still incomplete!!
-! Webpages work
-! Rooms + multiplayer function does not work
+  !! Code is still incomplete!!
+  - Webpages work
+  - Rooms + multiplayer function does not work
+  - Inputs do not work
 
 
