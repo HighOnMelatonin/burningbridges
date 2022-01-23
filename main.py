@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 players = ['highonmelatonin', 'SomeNickname', 'GeneralKen0bi','lowondopamine','highoncortisol']
 
 HOST = '127.0.0.1'
-PORT = random.randint(
+PORT = 5000
 
 @app.route('/')
 def home():
