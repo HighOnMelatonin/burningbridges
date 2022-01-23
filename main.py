@@ -1,47 +1,45 @@
 import flask
 import random
-import socket
-#import tqdm
-import os
-from flask import render_template,url_for,request
-
-SEPARATOR = "<SEPARATOR>"
-BUFFER_SIZE = 4096
+from flask import render_template
+from flask import request
 
 app = flask.Flask(__name__)
+players = ['highonmelatonin', 'SomeNickname', 'GeneralKen0bi','lowondopamine','highoncortisol']
+
 HOST = '127.0.0.1'
-PORT = random.randint(1024,49151)
+PORT = random.randint(
 
-filename = "home.html"
-#filesize = os.path.getsize(filename)
-
-##s = socket.socket()
-##addr = (HOST,PORT)
-##
-##s.bind(addr)
-##s.listen(5)
-##
-##while True:
-##    c,(c_h,c_p) = s.accept()
-##    c.send(f"{filename}{SEPARATOR}{filesize}".encode())
-
-@app.route('/',methods = ["GET","POST"])
+@app.route('/')
 def home():
-    if request.method == "GET":
-        return render_template('home.html') #Create game -> redirect to lobby
+    return render_template('home.html')
 
-@app.route('/lobby.html',methods = ["GET","POST"])
+
+@app.route('/lobby', methods = ['POST'])
 def lobby():
-    code = random.randint(0,1023) #port number
-    if request.method == "POST":
-        return render_template("lobby.html",code = PORT)
-    if request.method == "GET":
-        return render_template("lobby.html",code = PORT)
-    if 'number' in request.form:
-        number = request.form['number']
-        return render_template("setup.html")
-    return render_template('lobby.html',code= PORT)
+    player = request.form.get("player")
+    code = 8888
+    return render_template('lobby.html', code = code, players = players)
 
 
-if __name__ == "__main__":
-    app.run()
+@app.route('/join/', methods = ['POST'])
+def join():
+    return render_template('player.html')
+
+
+@app.route('/setup/', methods = ['POST'])
+def setup():
+    number = request.form.get("number")
+    number = int(number)
+    number = 1
+    return render_template('setup.html', players = players, number = number)
+
+
+@app.route('/game/', methods = ['POST'])
+def game():
+    question = request.form.get("question")
+    selected = request.form.get("selected")
+    return render_template('game.html', players = players, question = question)
+
+
+if __name__ == '__main__':
+    app.run(debug = True)
