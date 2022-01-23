@@ -12,6 +12,32 @@
             <h1 class = "header">Burning Bridges</h1>
         </div>
 
+
+        <div class="leftcontent">
+            <h3 class = "createGame">Create Game</h3>
+
+            <div class="usericon">
+                <img class="usericon" src = "../static/default user pic.png">
+            </div>
+
+            <div class="description">
+                <p class = "description">Choose a nickname</p>
+                <form method = "POST" action = "{{ url_for('lobby') }}">
+                    <input class = "textinput" placeholder="HighOnGelato" name = "player">
+                    <input class = "submitbutton" type = "submit" value = "Start">
+                </form>
+            </div>
+
+            <p class = "formcontext">Joining a lobby</p>
+            <form method = "POST" action = "{{ url_for('join', code = code) }}">
+                <div class="room">
+                    <input class = "textinput" placeholder = "Invite code" name = "code" type = "text">
+                    <input class = "submitbutton" type = "submit" value = "Join">
+                </div>
+            </form>
+        </div>
+
+
         <div class="rightcontent">
             <h3 class = "howTo">How to play</h3>
 
@@ -19,21 +45,27 @@
                 <div class="steps">
                     <p class = "steps">1. Game master decides on the number of questions</p>
                 </div>
+
                 <div class="steps">
                     <p class = "steps">2. Every player gets to contribute questions</p>
                 </div>
+
                 <div class="steps">
-                    <p class = "steps">3. Each round, a player will be sacrificed, SOMETHINGSOMETHING question will be revealed</p>
+                    <p class = "steps">3. Each round, a player will be sacrificed</p>
+                </div>
+
+                <div class="steps">
+                    <p class = "steps">4. The player would publicly choose someone else that matches the question the best</p>
+                </div>
+
+                <div class="steps">
+                    <p class = "steps">5. If SOMETHINGSOMETHING, the question will be revealed</p>
                 </div>
 
             </div>
 
             <h3 class="howTo">There is no winner in this game, everyone loses :)</h3>
 
-        </div>
-
-        <div class="leftcontent">
-            <a href = "lobby.html" class = "createGame">Create Game</h3></a>
         </div>
 
     </body>
