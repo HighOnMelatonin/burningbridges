@@ -32,7 +32,7 @@ def home():
 @app.route('/lobby.html',methods = ["GET","POST"])
 def lobby():
     code = random.randint(0,1023) #port number
-    if request.method == "GET":
+    if request.method == "POST":
         return render_template('lobby.html',code= PORT)
     if 'number' in request.form:
         number = request.form['number']
