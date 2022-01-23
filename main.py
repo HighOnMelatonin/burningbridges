@@ -25,21 +25,22 @@ filename = "home.html"
 ##    c,(c_h,c_p) = s.accept()
 ##    c.send(f"{filename}{SEPARATOR}{filesize}".encode())
 
-@app.route('/')
+@app.route('/',methods = ["GET","POST"])
 def home():
-    return render_template('home.html') #Create game -> redirect to lobby
+    if request.method == "GET":
+        return render_template('home.html') #Create game -> redirect to lobby
 
 @app.route('/lobby.html',methods = ["GET","POST"])
 def lobby():
     code = random.randint(0,1023) #port number
     if request.method == "POST":
-        return render_template('lobby.html',code= PORT)
+        return render_template("lobby.html",code = PORT)
+    if request.method == "GET":
+        return render_template("lobby.html",code = PORT)
     if 'number' in request.form:
         number = request.form['number']
         return render_template("setup.html")
-    
-
-    
+    return render_template('lobby.html',code= PORT)
 
 
 if __name__ == "__main__":
