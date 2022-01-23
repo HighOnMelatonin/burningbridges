@@ -1,5 +1,3 @@
-from django.shortcuts import render
-from scipy import rand
 import helper
 import flask
 from flask import render_template
